@@ -22,14 +22,7 @@ Pod::Spec.new do |s|
     s.requires_arc          = true
   
     s.vendored_frameworks = 'YunoAntifraudClearsale.xcframework'
-    s.resource_bundles = {
-          'Resources' => [
-              'YunoAntifraudClearsale.xcframework/Assets/**/*.xcassets',
-              'YunoAntifraudClearsale.xcframework/Assets/Localization/*.lproj',
-              'YunoAntifraudClearsale.xcframework/Assets/**/*.{storyboard,xib,json}'
-          ]
-      }
-  
+      
     s.frameworks = 'UIKit'
     s.frameworks = 'Combine'
     s.xcconfig = { 'SWIFT_INCLUDE_PATHS' => ['${PODS_XCFRAMEWORKS_BUILD_DIR}/YunoAntifraudClearsale'] }
