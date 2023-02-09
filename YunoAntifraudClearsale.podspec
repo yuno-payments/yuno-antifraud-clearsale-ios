@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'YunoAntifraudClearsale'
-    s.version          = '0.0.1'
+    s.version          = '0.0.3'
     s.summary          = 'A short description of YunoSDK.'
   
     s.description      = <<-DESC
@@ -22,6 +22,8 @@ Pod::Spec.new do |s|
     s.requires_arc          = true
   
     s.vendored_frameworks = 'YunoAntifraudClearsale.xcframework'
+    
+    s.dependency 'CSBehavior', '3.0.4-xc'
       
     s.frameworks = 'UIKit'
     s.frameworks = 'Combine'
