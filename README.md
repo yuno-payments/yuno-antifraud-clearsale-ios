@@ -17,7 +17,7 @@ YunoAntifraudClearsale is available through [CocoaPods](https://cocoapods.org). 
 
 ```ruby
 
-pod 'YunoAntifraudClearsale', '~> 0.0.0'
+pod 'YunoAntifraudClearsale', '~> 0.0.3'
 
 ```
 
