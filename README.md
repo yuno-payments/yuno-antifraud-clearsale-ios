@@ -34,8 +34,8 @@ This is the recommended method for versions **1.3.0 and later**.
 You can also use CocoaPods for version **`1.3.0`**. Add the following line to your `Podfile`:
 
 ```ruby
-pod 'YunoAntifraudClearsale', '~> 1.3.0'
-
+pod 'YunoAntifraudClearsaleSDK', '~> 1.3.0'
+```
 ### Core SDK Dependency
 
 This package also requires you to add the main Yuno SDK as a dependency. Repeat the SPM installation process with the following URL:
