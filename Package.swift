@@ -12,7 +12,7 @@ let package = Package(
             targets: ["YunoAntifraudClearsale", "ClearsaleWrapper"])
     ],
     dependencies: [
-        .package(name: "YunoSDK", url: "https://github.com/yuno-payments/yuno-sdk-ios.git", .upToNextMajor(from: "1.25.0"))
+        .package(name: "YunoSDK", url: "https://github.com/yuno-payments/yuno-sdk-ios.git", .upToNextMajor(from: "2.6.0"))
     ],
     targets: [
         .binaryTarget(
