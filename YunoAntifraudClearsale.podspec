@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'YunoAntifraudClearsale'
-    s.version          = '1.0.0'
+    s.version          = '1.3.0'
     s.summary          = 'A short description of YunoSDK.'
   
     s.description      = <<-DESC
@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
     s.author           = { 'yuno' => 'viviana.mesa@y.uno' }
     s.source           = { :http => 'https://github.com/yuno-payments/yuno-antifraud-clearsale-ios/releases/download/' + s.version.to_s + '/YunoAntifraudClearsale.xcframework.zip' }
   
-    s.ios.deployment_target = '13.0'
+    s.ios.deployment_target = '14.0'
     s.swift_version         = '5.4'
-    s.platform              = :ios, '13.0'
+    s.platform              = :ios, '14.0'
   
     s.requires_arc          = true
   

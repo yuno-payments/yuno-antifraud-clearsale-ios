@@ -18,14 +18,23 @@ An SDK to gather device information and load it to ClearSale.
 
 YunoAntifraudClearsale is installed exclusively via **Swift Package Manager (SPM)**.
 
-To add it to your project, follow these steps:
+### 1. Swift Package Manager (SPM)
+
+This is the recommended method for versions **1.3.0 and later**.
 
 1.  In Xcode, go to **File > Add Packages...**
 2.  Enter the ClearSale repository URL:
     ```
-    https://github.com/yuno-payments/yuno-antifraud-clearsale-ios
+    [https://github.com/yuno-payments/yuno-antifraud-clearsale-ios](https://github.com/yuno-payments/yuno-antifraud-clearsale-ios)
     ```
 3.  Ensure you select **version `1.3.0`** or higher.
+
+### 2. CocoaPods
+
+You can also use CocoaPods for version **`1.3.0`**. Add the following line to your `Podfile`:
+
+```ruby
+pod 'YunoAntifraudClearsale', '~> 1.3.0'
 
 ### Core SDK Dependency
 
