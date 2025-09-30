@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-    s.name             = 'YunoAntifraudClearsale'
+    s.name             = 'YunoAntifraudClearsaleSDK'
     s.version          = '1.3.0'
     s.summary          = 'A short description of YunoSDK.'
   
