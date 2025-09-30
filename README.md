@@ -1,88 +1,62 @@
 
 # YunoAntifraudClearsale
 
-  
-
 [![Version](https://img.shields.io/cocoapods/v/antifraud-clearsale.svg?style=flat)](https://cocoapods.org/pods/antifraud-clearsale)
 
-[![License](https://img.shields.io/cocoapods/l/antifraud-clearsale.svg?style=flat)](https://cocoapods.org/pods/antifraud-clearsale)
+[![License](https://img.shields.io/cocoapods/l/YunoSDK.svg?style=flat)](https://cocoapods.org/pods/YunoSDK)
 
-[![Platform](https://img.shields.io/cocoapods/p/antifraud-clearsale.svg?style=flat)](https://cocoapods.org/pods/antifraud-clearsale)
+[![Platform](https://img.shields.io/cocoapods/p/YunoSDK.svg?style=flat)](https://cocoapods.org/pods/YunoSDK)
+
+[![iOS Minimum Deploy Target - 14.0](https://img.shields.io/static/v1?label=iOS+Minimum+Deploy+Target&message=14.0&color=2ea44f)](https://)
+
 
 An SDK to gather device information and load it to ClearSale.
 
-## Installation
+---
 
-YunoAntifraudClearsale is available through [CocoaPods](https://cocoapods.org). To install it, simply add the following line to your Podfile:
+## Installation (Swift Package Manager - SPM)
 
-```ruby
+YunoAntifraudClearsale is installed exclusively via **Swift Package Manager (SPM)**.
 
-pod 'YunoAntifraudClearsale', '~> 0.0.3'
+To add it to your project, follow these steps:
 
-```
+1.  In Xcode, go to **File > Add Packages...**
+2.  Enter the ClearSale repository URL:
+    ```
+    https://github.com/yuno-payments/yuno-antifraud-clearsale-ios
+    ```
+3.  Ensure you select **version `1.3.0`** or higher.
 
-## Configuration
+### Core SDK Dependency
 
-Instructions for configuring the framework in the project:
+This package also requires you to add the main Yuno SDK as a dependency. Repeat the SPM installation process with the following URL:
 
-Open the project editor and select the project, on the "Build Settings" tab add the "-ObjC" flag to the "Other Linker Flags" setting.
+https://github.com/yuno-payments/yuno-sdk-ios
 
-Add the following entries to the destination project Info.plist file:
 
-```
-<key>NSAppTransportSecurity</key>
-<dict>
-    <key>NSExceptionDomains</key>
-    <dict>
-        <key>clearsale.com.br</key>
-        <dict>
-            <key>NSTemporaryExceptionMinimumTLSVersion</key>
-            <string>TLSv1.0</string>
-        </dict>
-    </dict>
-</dict>
-```
+---
 
 ## Usage
 
-YunoAntifraudClearsale minimum required version is iOS 13.0
+The minimum required version is **iOS 14.0**.
 
-First, you'll need to get your ClearSale iOS API key. Then initialize by importing YunoAntifraudClearsale and adding the following to your application delegate:
+### Fraud Provider Configuration
 
+To integrate **YunoAntifraudClearsale**, you must configure it as a fraud provider within the `YunoSDK` **before** calling any payment initiation method (`startPaymentLite` or `startPayment`).
 
-> Note: If your app is using a UISceneDelegate you will need to put your YunoAntifraudClearsale initialisation code into your SceneDelegate
-
-  
+Make sure to import both modules and then use the static method `Yuno.setFraudProviders(with:)`:
 
 ```swift
-
 import YunoSDK
+import YunoAntifraudClearsale // Import the provider class
 
-YunoClearsale.initialize(apiKey: "<Your iOS API Key>")
+// Configure Clearsale as a fraud provider.
+// You must pass an instance of the class inside an array.
+Yuno.setFraudProviders(with: [YunoAntifraudClearsale()]) 
 
+// Once the provider is configured, you can initiate the payment process.
+// Yuno.startPaymentLite(...) or Yuno.startPayment(...)
 ```
-
-Before using the sdk make sure to import AppTrackingTransparency.
-
-```swift
-import AppTrackingTransparency
-...
-if #available(iOS 14, *) {
-    ATTrackingManager.requestTrackingAuthorization { _ in
-    }
-}
-```
-  
-## Functions
-
-To start the collection of data on the device and screen, call the following method:
-
- 
-```swift
-YunoClearsale.collectDeviceInformation()
-```
-
-
 ## Author  
 Yuno Payments Inc.
 
