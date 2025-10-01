@@ -15,11 +15,11 @@ let package = Package(
         .binaryTarget(
             name: "YunoAntifraudClearsale",
             url: "https://github.com/yuno-payments/yuno-antifraud-clearsale-ios/releases/download/1.3.0/YunoAntifraudClearsale.xcframework.zip",
-            checksum: "328b9ef90ce956df85bb83711f8de788d84f801e4a89226a4d404f129003ffad"
+            checksum: "294b96b34764b4228d9dd48430f5f4049cab76c70b12917f6347cc8607d7e88b"
         ),
         .binaryTarget(name: "CSBehavior",
-                      url: "https://device.clearsale.com.br/ios/sdk-behavior-v3.0.4-xc-release.zip",
-                      checksum: "75ce6e31618499736767007c5c96a4d99ba342d4d674cd21a1236b9bb839e969"),
+                      url: "https://device.clearsale.com.br/ios/CSBehavior.xcframework-4.0.9.zip",
+                      checksum: "33fc62b08f3b4449fd94b42df9623357a929e71d965e4a55147365adaaf6383d"),
         .target(
             name: "ClearsaleWrapper",
             dependencies: [
