@@ -15,7 +15,7 @@ let package = Package(
         .binaryTarget(
             name: "YunoAntifraudClearsale",
             url: "https://github.com/yuno-payments/yuno-antifraud-clearsale-ios/releases/download/1.3.0/YunoAntifraudClearsale.xcframework.zip",
-            checksum: "328b9ef90ce956df85bb83711f8de788d84f801e4a89226a4d404f129003ffad"
+            checksum: "ed37f20d254dcf3f5fb52fa90eeabdb4479838cec344e1634c6403170708bbef"
         ),
         .binaryTarget(name: "CSBehavior",
                       url: "https://device.clearsale.com.br/ios/sdk-behavior-v3.0.4-xc-release.zip",
