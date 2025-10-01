@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
     # script to unzip the xcframework downloaded from the OpenPay repo
     s.prepare_command = <<-CMD
     curl -L -o CSBehavior.xcframework.zip https://device.clearsale.com.br/ios/sdk-behavior-v3.0.4-xc-release.zip && \
-    unzip CSBehavior.xcframework.zip && \
+    unzip -o CSBehavior.xcframework.zip && \
     rm CSBehavior.xcframework.zip
     CMD
 
